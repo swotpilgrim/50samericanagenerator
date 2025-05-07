@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1950s Character Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Barlow+Condensed:wght@400;700&family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Americana Character Generator</h1>
+            <div class="neon-sign">Hot Rods & Bobby Sox</div>
+        </header>
+
+        <main>
+            <div class="character-form">
+                <div class="form-group">
+                    <label for="characterGender">Character Gender</label>
+                    <select id="characterGender">
+                        <option value="girl">Girls/Women</option>
+                        <option value="boy">Boys/Men</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="outfitsGroup">
+                    <label for="outfits">Complete Outfits (optional)</label>
+                    <select id="outfits">
+                        <option value="">Create your own custom outfit</option>
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                    <p class="hint">Select a complete outfit or customize below</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="styleFoundation">Style Foundation</label>
+                    <select id="styleFoundation">
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="hairstyle">Hairstyle</label>
+                    <select id="hairstyle">
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                </div>
+
+                <div class="form-sections">
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label for="tops">Top</label>
+                            <select id="tops">
+                                <!-- Options will be populated by JavaScript -->
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bottoms">Bottom</label>
+                            <select id="bottoms">
+                                <!-- Options will be populated by JavaScript -->
+                            </select>
+                        </div>
+
+                        <div class="form-group" id="dressGroup" style="display: none;">
+                            <label for="dresses">Dress</label>
+                            <select id="dresses">
+                                <!-- Options will be populated by JavaScript -->
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label for="jackets">Jacket/Outerwear</label>
+                            <select id="jackets">
+                                <!-- Options will be populated by JavaScript -->
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="footwear">Footwear</label>
+                            <select id="footwear">
+                                <!-- Options will be populated by JavaScript -->
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Accessories & Features (select up to 3)</label>
+                    <div class="accessory-container" id="accessoryContainer">
+                        <!-- Checkboxes will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Color Scheme</label>
+                    <div class="color-scheme-container">
+                        <div class="color-row">
+                            <label for="mainColor">Main:</label>
+                            <select id="mainColor">
+                                <!-- Options will be populated by JavaScript -->
+                            </select>
+                        </div>
+                        <div class="color-row">
+                            <label for="secondaryColor">Secondary:</label>
+                            <select id="secondaryColor">
+                                <!-- Options will be populated by JavaScript -->
+                            </select>
+                        </div>
+                        <div class="color-row">
+                            <label for="accentColor">Accent:</label>
+                            <select id="accentColor">
+                                <!-- Options will be populated by JavaScript -->
+                            </select>
+                        </div>
+                        <div class="color-button">
+                            <button type="button" id="autoColorBtn" class="secondary-button">Auto Pick Color Scheme</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button id="generateBtn">Generate Character</button>
+                    <button id="randomizeBtn">Randomize All</button>
+                    <button id="resetBtn">Reset Form</button>
+                </div>
+            </div>
+
+            <div class="character-output">
+                <h2>Your Character</h2>
+                <div id="characterDescription" class="description-box"></div>
+                <div class="visual-notes">
+                    <h3>Visual Elements</h3>
+                    <ul id="visualElements"></ul>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2025 Americana Character Generator | Inspired by 1950s pop culture</p>
+        </footer>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="descriptions.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
