@@ -1,0 +1,403 @@
+/* 1950s Inspired Styling */
+:root {
+    --primary-red: #e63946;
+    --primary-red-rgb: 230, 57, 70;
+    --primary-blue: #457b9d;
+    --light-blue: #a8dadc;
+    --off-white: #f1faee;
+    --dark-blue: #1d3557;
+    --jukebox-gold: #d4af37;
+    --chrome-silver: #c0c0c0;
+    --mint-green: #ade1b4;
+    --bubblegum-pink: #ffb6c1;
+    --turquoise: #40e0d0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif;
+    background-color: var(--off-white);
+    /* Using a pattern that doesn't require external hosting */
+    background-image: 
+        linear-gradient(rgba(241, 250, 238, 0.9), rgba(241, 250, 238, 0.9)),
+        repeating-linear-gradient(45deg, var(--light-blue) 0, var(--light-blue) 5px, var(--off-white) 5px, var(--off-white) 10px);
+    color: var(--dark-blue);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 5px solid var(--primary-red);
+    padding-bottom: 20px;
+    position: relative;
+}
+
+h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 48px;
+    color: var(--dark-blue);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 0px var(--chrome-silver);
+}
+
+.neon-sign {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 28px;
+    color: var(--primary-red);
+    background-color: var(--dark-blue);
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(230, 57, 70, 0.7),
+                0 0 20px rgba(230, 57, 70, 0.5);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    letter-spacing: 2px;
+    transform: rotate(-2deg);
+    margin-top: 10px;
+    border: 2px solid white;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.character-form {
+    flex: 1;
+    min-width: 300px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--primary-blue);
+    position: relative;
+}
+
+.character-form::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 1px dashed var(--primary-blue);
+    border-radius: 10px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.character-output {
+    flex: 1;
+    min-width: 300px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--primary-red);
+    position: relative;
+    /* Replacing the external image with a checkered pattern */
+    background-image: 
+        linear-gradient(45deg, var(--light-blue) 25%, transparent 25%, transparent 75%, var(--light-blue) 75%),
+        linear-gradient(45deg, var(--light-blue) 25%, transparent 25%, transparent 75%, var(--light-blue) 75%);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
+    background-blend-mode: overlay;
+    background-color: white;
+    background-opacity: 0.1;
+}
+
+.character-output::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 1px dashed var(--primary-red);
+    border-radius: 10px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.form-sections {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.form-column {
+    flex: 1;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--dark-blue);
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--light-blue);
+    border-radius: 5px;
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    background-color: white;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+select:focus {
+    border-color: var(--primary-blue);
+    outline: none;
+}
+
+.hint {
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+    font-style: italic;
+}
+
+#outfitsGroup {
+    margin-bottom: 25px;
+    padding: 10px;
+    background-color: rgba(168, 218, 220, 0.2);
+    border-radius: 5px;
+    border-left: 4px solid var(--light-blue);
+}
+
+.accessory-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 5px;
+    border: 1px solid var(--light-blue);
+    border-radius: 5px;
+    background-color: white;
+}
+
+.accessory-item {
+    display: flex;
+    align-items: center;
+    width: calc(50% - 10px);
+}
+
+.accessory-item input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.color-scheme-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.color-row {
+    display: flex;
+    align-items: center;
+}
+
+.color-row label {
+    width: 90px;
+    margin-bottom: 0;
+}
+
+.color-row select {
+    flex: 1;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 12px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 18px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, transform 0.1s;
+    flex: 1;
+}
+
+button:hover {
+    background-color: var(--dark-blue);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#generateBtn {
+    background-color: var(--primary-red);
+}
+
+#generateBtn:hover {
+    background-color: #c42634;
+}
+
+#randomizeBtn {
+    background-color: var(--primary-blue);
+}
+
+#randomizeBtn:hover {
+    background-color: #3a6b8a;
+}
+
+#resetBtn {
+    background-color: var(--dark-blue);
+}
+
+#resetBtn:hover {
+    background-color: #15293f;
+}
+
+h2 {
+    font-family: 'Bebas Neue', cursive;
+    color: var(--primary-red);
+    font-size: 32px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--light-blue);
+    padding-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.description-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--light-blue);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    min-height: 200px;
+    font-size: 18px;
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
+}
+
+.visual-notes {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--light-blue);
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+h3 {
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 24px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+li:before {
+    content: '•';
+    color: var(--primary-red);
+    position: absolute;
+    left: 0;
+    font-size: 20px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 14px;
+    color: var(--dark-blue);
+    border-top: 3px solid var(--primary-blue);
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+    
+    .form-sections {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    h1 {
+        font-size: 36px;
+    }
+    
+    .neon-sign {
+        font-size: 22px;
+        padding: 8px 20px;
+    }
+    
+    .accessory-item {
+        width: 100%;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    button {
+        width: 100%;
+    }
+}
+
+/* Vintage hover effects */
+.character-form:hover, .character-output:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+/* Style for the secondary button */
+.secondary-button {
+    background-color: var(--primary-blue);
+    padding: 8px 12px;
+    font-size: 14px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.color-button {
+    margin-top: 10px;
+}
